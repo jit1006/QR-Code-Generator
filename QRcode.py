@@ -1,16 +1,45 @@
 import streamlit as st
 import qrcode 
+from PIL import Image
 import io
 import os
 
 # text= input("enter any test :")
-txt = st.text_area('Text to analyze', '''
-     It was the best of times, it was the worst of times, it was
-     the age of wisdom, it was the age of foolishness, it was
-     the epoch of belief, it was the epoch of incredulity, it
-     was the season of Light, it was the season of Darkness, it
-     was the spring of hope, it was the winter of despair, (...)
-     ''')
-st.write('Sentiment:', run_sentiment_analysis(txt))
-# img = qrcode.make(txt)
+st.title("Generate OR code in Fun")
+title = st.text_input('Enter the txt :', ':)')    
+
+if title is not None:
+     
+     img = qrcode.make(title)
+     img.save("qrcode.jpg")
+     st.image("qrcode.jpg" , caption='QR CODE IMAGE :) ')
+     with open("qrcode.jpg", "rb") as file:
+          st.title("QR Image Here :) ")
+          btn = st.download_button(
+               label="Download IMAGE !",
+               data=file,
+               file_name="oqcode.jpg",
+               mime="image/png"
+               
+               )
+     
+else:
+     st.image("qrcode1.png", caption='QR CODE IMAGE :) ')
+     with open("qrcode1.png", "rb") as file:
+          st.title("QR Image Here :) ")
+          btn = st.download_button(
+               label="Download IMAGE !",
+               data=file,
+               file_name="oqcode.jpg",
+               mime="image/png"
+               
+               )
+          
+               
+     
+     
+# img = qrcode.make(title)
 # img.save("qrcode1.jpg")
+
+
+
