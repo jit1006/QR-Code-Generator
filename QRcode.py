@@ -5,7 +5,7 @@ import io
 import os
 
 # text= input("enter any test :")
-st.title("Generate OR code in Fun")
+st.title("Generate OR code in Fun :)")
 title = st.text_input('Enter the txt :', ':)')    
 
 if title is not None:
@@ -14,9 +14,9 @@ if title is not None:
      img.save("qrcode.jpg")
      st.image("qrcode.jpg" , caption='QR CODE IMAGE :) ')
      with open("qrcode.jpg", "rb") as file:
-          st.title("QR Image Here :) ")
+          st.title("Download the QR Image :)")
           btn = st.download_button(
-               label="Download IMAGE !",
+               label="Download",
                data=file,
                file_name="oqcode.jpg",
                mime="image/png"
@@ -26,9 +26,9 @@ if title is not None:
 else:
      st.image("qrcode1.png", caption='QR CODE IMAGE :) ')
      with open("qrcode1.png", "rb") as file:
-          st.title("QR Image Here :) ")
+          st.title("Download the QR Image :)")
           btn = st.download_button(
-               label="Download IMAGE !",
+               label="Download",
                data=file,
                file_name="oqcode.jpg",
                mime="image/png"
