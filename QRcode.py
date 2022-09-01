@@ -36,16 +36,7 @@ else:
                
                )
           
-               
-   
-with open("requirements.txt", "rb") as file:
-          st.title("Download the QR Image :)")
-          btn = st.download_button(
-               label="Download",
-               data=file,
-               file_name="oqcode.txt",
-               mime="image/txt
-     
+                    
 # img = qrcode.make(title)
 # img.save("qrcode1.jpg")
 
