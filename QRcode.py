@@ -9,7 +9,7 @@ import os
 st.title("Generate OR code in Fun :)")
 title = st.text_input('Enter the txt :', ':)')    
 
-st.write("README.md")
+st.txt("requirements.txt")
 
 if title is not None:
      
