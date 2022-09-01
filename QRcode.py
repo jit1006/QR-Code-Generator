@@ -8,7 +8,7 @@ import os
 # text= input("enter any test :")
 st.title("Generate OR code in Fun :)")
 title = st.text_input('Enter the txt :', ':)')    
-st.write(title)
+st.write("requirements.txt")
 if title is not None:
      
      img = qrcode.make(title)
