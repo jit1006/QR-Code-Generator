@@ -5,13 +5,6 @@ import io
 import os
 
 
-[theme]
-primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
-font="sans serif"
-
 # text= input("enter any test :")
 st.title("Generate OR code in Fun :)")
 title = st.text_input('Enter the txt :', ':)')    
