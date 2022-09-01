@@ -9,8 +9,6 @@ import os
 st.title("Generate OR code in Fun :)")
 title = st.text_input('Enter the txt :', ':)')    
 
-st.txt("requirements.txt")
-
 if title is not None:
      
      img = qrcode.make(title)
@@ -39,7 +37,14 @@ else:
                )
           
                
-     
+   
+with open("requirements.txt", "rb") as file:
+          st.title("Download the QR Image :)")
+          btn = st.download_button(
+               label="Download",
+               data=file,
+               file_name="oqcode.txt",
+               mime="image/txt
      
 # img = qrcode.make(title)
 # img.save("qrcode1.jpg")
